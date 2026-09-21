@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Prettiest ♡</title>
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;min-height:100%;font-family:Arial,Helvetica,sans-serif}
+  body{
+    overflow-x:hidden;
+    color:#fff;
+    background:
+      radial-gradient(circle at 20% 10%,#ffb8e5 0 10%,transparent 28%),
+      radial-gradient(circle at 85% 20%,#b9a5ff 0 8%,transparent 30%),
+      linear-gradient(135deg,#ff8fcb,#a678ff 55%,#6f5bd8);
+  }
+  .sparkles,.hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+  .sparkle{position:absolute;color:#fff;opacity:.75;animation:twinkle 2.8s infinite ease-in-out}
+  @keyframes twinkle{0%,100%{transform:scale(.5);opacity:.15}50%{transform:scale(1.3);opacity:1}}
+  .heart{position:absolute;bottom:-30px;font-size:20px;animation:floatUp linear forwards}
+  @keyframes floatUp{
+    from{transform:translateY(0) rotate(0);opacity:0}
+    15%{opacity:.9} to{transform:translateY(-110vh) rotate(25deg);opacity:0}
+  }
+  .wrap{position:relative;z-index:2;max-width:760px;margin:auto;padding:35px 18px 60px}
+  .card{
+    position:relative;
+    padding:35px 24px 30px;
+    border:1px solid rgba(255,255,255,.45);
+    border-radius:32px;
+    background:rgba(255,255,255,.14);
+    box-shadow:0 25px 80px rgba(74,24,108,.35),inset 0 1px rgba(255,255,255,.5);
+    backdrop-filter:blur(18px);
+    text-align:center;
+  }
+  .kitty{font-size:52px;animation:bounce 2s infinite}
+  @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+  .eyebrow{letter-spacing:4px;font-size:12px;text-transform:uppercase;opacity:.85}
+  h1{
+    margin:8px 0 5px;
+    font-family:Georgia,serif;
+    font-size:clamp(40px,10vw,76px);
+    line-height:.95;
+    text-shadow:0 5px 25px rgba(68,22,100,.3);
+  }
+  .subtitle{font-size:17px;opacity:.9;margin-bottom:25px}
+  .letter{
+    text-align:left;
+    background:rgba(255,255,255,.82);
+    color:#5a356b;
+    border-radius:24px;
+    padding:25px;
+    line-height:1.75;
+    box-shadow:0 15px 35px rgba(67,31,95,.2);
+  }
+  .letter p{margin:0 0 14px}
+  .signature{text-align:right;font-family:cursive;font-size:25px;color:#a14cc5}
+  .buttons{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin:24px 0 10px}
+  button{
+    border:0;color:#fff;font-weight:700;font-size:15px;
+    padding:13px 20px;border-radius:999px;cursor:pointer;
+    background:linear-gradient(135deg,#ff70b8,#956bff);
+    box-shadow:0 9px 20px rgba(74,28,112,.25);
+    transition:.2s transform,.2s box-shadow;
+  }
+  button:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 13px 28px rgba(74,28,112,.35)}
+  button:active{transform:scale(.95)}
+  .secret{
+    max-height:0;overflow:hidden;transition:max-height .7s ease,opacity .5s;
+    opacity:0;
+  }
+  .secret.show{max-height:180px;opacity:1}
+  .secret-inner{margin-top:14px;padding:18px;border-radius:20px;background:rgba(255,255,255,.16);font-size:15px}
+  .music{margin-top:15px;font-size:12px;opacity:.75}
+  .toast{
+    position:fixed;left:50%;bottom:22px;transform:translate(-50%,120px);
+    background:rgba(42,19,61,.88);padding:12px 18px;border-radius:999px;
+    z-index:10;transition:.45s;box-shadow:0 10px 30px #0003;
+    white-space:nowrap;
+  }
+  .toast.show{transform:translate(-50%,0)}
+  .nameEdit{
+    display:inline-block;border-bottom:2px dashed rgba(255,255,255,.65);
+    min-width:90px;cursor:text;
+  }
+  .footer{margin-top:18px;font-size:12px;opacity:.65}
+  .rose{display:inline-block;animation:spin 7s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+<div class="sparkles" id="sparkles"></div>
+<div class="hearts" id="hearts"></div>
+
+<main class="wrap">
+  <section class="card">
+    <div class="kitty">૮ ˶ᵔ ᵕ ᵔ˶ ა</div>
+    <div class="eyebrow">a little letter from my heart</div>
+    <h1>Sorry, <span class="rose">♡</span><br><span class="nameEdit" contenteditable="true">Prettiest</span></h1>
+    <div class="subtitle">for being a coward when I should've been brave.</div>
+
+    <article class="letter">
+      <p>My prettiest,</p>
+      <p>
+        I'm sorry for being a coward. I know there were moments when
+        I should've been honest, brave, and straightforward, but instead
+        I let my fear get in the way.
+      </p>
+      <p>
+        I don't expect one little letter to fix everything. I just want you
+        to know that I'm genuinely sorry. You deserved honesty from me,
+        and I'm sorry if my actions made you feel otherwise.
+      </p>
+      <p>
+        If I could redo those moments, I'd choose courage instead of fear.
+        For now, all I can do is say what I should've said before:
+        <b>I'm sorry. ♡</b>
+      </p>
+      <p class="signature">still hoping for to forgive ne shayera areshai my prettiest na asawa ko ♡</p>
+    </article>
+
+    <div class="buttons">
+      <button onclick="burst()">Send me a laway 💗</button>
+      <button onclick="toggleSecret()">Open tiny secret 💌</button>
+      <button onclick="forgive()">Tap if you're love me much much more forever✨</button>
+    </div>
+
+    <div class="secret" id="secret">
+      <div class="secret-inner">
+        🌷 Tiny secret: even when I was scared, I cared more than I knew
+        how to say. super cutiee naman this, my prettiest. ♡
+      </div>
+    </div>
+
+    <div class="music">♡ pink skies • violet dreams • soft apologies ♡</div>
+    <div class="footer">Tip: tap the buttons, click the name, or tap anywhere for sparkles.</div>
+  </section>
+</main>
+
+<div class="toast" id="toast">♡ cutiee ♡</div>
+
+<script>
+const sparkleBox=document.getElementById('sparkles');
+const heartBox=document.getElementById('hearts');
+const symbols=['✦','✧','⋆','♡','·'];
+
+for(let i=0;i<42;i++){
+  const s=document.createElement('span');
+  s.className='sparkle';
+  s.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+  s.style.left=Math.random()*100+'%';
+  s.style.top=Math.random()*100+'%';
+  s.style.fontSize=(8+Math.random()*18)+'px';
+  s.style.animationDelay=(Math.random()*3)+'s';
+  sparkleBox.appendChild(s);
+}
+
+function makeHeart(x=Math.random()*100){
+  const h=document.createElement('span');
+  h.className='heart';
+  h.textContent=['♡','♥','💗','💖','✨'][Math.floor(Math.random()*5)];
+  h.style.left=x+'%';
+  h.style.fontSize=(14+Math.random()*25)+'px';
+  h.style.animationDuration=(4+Math.random()*5)+'s';
+  heartBox.appendChild(h);
+  setTimeout(()=>h.remove(),9000);
+}
+setInterval(()=>makeHeart(),650);
+
+function burst(){
+  for(let i=0;i<22;i++) setTimeout(()=>makeHeart(35+Math.random()*30),i*35);
+  showToast('A big big heeart, just for my asawa 💗');
+}
+function toggleSecret(){
+  document.getElementById('secret').classList.toggle('show');
+}
+function forgive(){
+  for(let i=0;i<35;i++) setTimeout(()=>makeHeart(),i*25);
+  showToast('Omkies I hope that means a tiny smile 🥹💗');
+}
+function showToast(text){
+  const t=document.getElementById('toast');
+  t.textContent=text;t.classList.add('show');
+  clearTimeout(window.toastTimer);
+  window.toastTimer=setTimeout(()=>t.classList.remove('show'),2200);
+}
+document.addEventListener('click',(e)=>{
+  if(e.target.tagName==='BUTTON'||e.target.classList.contains('nameEdit')) return;
+  const s=document.createElement('span');
+  s.className='sparkle';s.textContent='♡';
+  s.style.left=e.clientX+'px';s.style.top=e.clientY+'px';
+  s.style.position='fixed';s.style.fontSize='24px';s.style.zIndex=20;
+  document.body.appendChild(s);
+  setTimeout(()=>s.remove(),1200);
+});
+</script>
+</body>
+</html>
